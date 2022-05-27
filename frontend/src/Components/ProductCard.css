@@ -1,0 +1,65 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  font-family: arial;
+  font-size: 18px;
+}
+
+.card h1 {
+	color: black;
+}
+
+.price {
+  color: green;
+  font-size: 22px;
+  font-style: italic;
+  
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card p {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.card h1 {
+	margin-bottom: 0px;
+}
+
+.card img {
+	width: 248px;
+	height: 367px;
+}
+
+.card div {
+	background-color: black;
+}
+
+.card .paypal-button:first-child {
+	display:none;
+}
+
+.paypal-button {
+	margin-top:-5px;
+	padding-top: 5px;
+}

@@ -1,0 +1,48 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+li {
+  float: left;
+  height: 55px;
+  max-height: 55px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  height: 55px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.login {
+	float: right;
+}
+
+.login a {
+	padding: 0px;
+}
+
+.login img {
+	height: 55px;
+}
+
+#navBar span {
+	padding: 20px;
+}

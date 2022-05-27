@@ -1,0 +1,17 @@
+.sidebar {
+	max-width: 20%;
+	z-index: 9999;
+}
+
+.left {
+	top:55px;
+	left:0px;
+	position: absolute;
+}
+
+.right {
+	float: right;
+	top:55px;
+	right:0px;
+	position: absolute;
+}

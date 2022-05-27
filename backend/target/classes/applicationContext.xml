@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="spiderman" class="net.clotfelter.duncan.ShoppingCartDemo.entities.products.Film">
+       <property name="id" value="0"/>
+       <property name="name" value="Spiderman: Revenge of the Spider"/>
+       <property name="price" value="4.99"/>
+       <property name="currency" value="USD"/>
+       <property name="showTime" value="Tomorrow"/>
+    </bean>
+
+    <bean id="beeman" class="net.clotfelter.duncan.ShoppingCartDemo.entities.products.Film">
+        <property name="id" value="1"/>
+        <property name="name" value="The Bee Movie: Return of the Bee"/>
+        <property name="price" value="4.99"/>
+        <property name="currency" value="USD"/>
+        <property name="showTime" value="Tomorrow"/>
+    </bean>
+
+    <bean id="batman" class="net.clotfelter.duncan.ShoppingCartDemo.entities.products.Film">
+        <property name="id" value="2"/>
+        <property name="name" value="Batman: The COVID Documentary"/>
+        <property name="price" value="4.99"/>
+        <property name="currency" value="USD"/>
+        <property name="showTime" value="Tomorrow"/>
+    </bean>
+</beans>
