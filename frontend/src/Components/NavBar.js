@@ -6,7 +6,7 @@ const NavBar = (props) =>{
   const [result, setResults] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/`)
+    axios.get(`/api`)
     .then(res => {
         var id = res.data;
         if(res.status < 200 || res.status >= 300) {id = -1;}
@@ -20,7 +20,7 @@ const NavBar = (props) =>{
 			<li><a class={isActive('/tickets')} href="tickets">My Tickets</a></li>
 			<li><a class={isActive('/contactus')} href="contactus">Contact Us</a></li>
       <li class="login">
-        <a href="http://localhost:8080/oauth2/authorization/github">
+        <a href="/oauth2/authorization/github">
           <img class={result != -1 ? 'hidden' : ''} src="https://cloud.githubusercontent.com/assets/194400/11214293/4e309bf2-8d38-11e5-8d46-b347b2bd242e.png"></img>
         </a>
         <span class={result == -1 ? 'hidden' : ''}>Welcome!</span>

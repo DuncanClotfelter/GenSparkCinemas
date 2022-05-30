@@ -60,16 +60,6 @@ public class ShoppingController extends WebSecurityConfigurerAdapter {
     }
 
     @CrossOrigin
-    @GetMapping("/")
-    public String mainPageOrig() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)) {
-            return authentication.getName();
-        }
-        return "-1";
-    }
-
-    @CrossOrigin
     @GetMapping("/api")
     public String mainPage() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

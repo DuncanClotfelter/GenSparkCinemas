@@ -1,7 +1,7 @@
 import NavBar from "./Components/NavBar";
 import SideBar from "./Components/SideBar";
-import ProductCard from "./Components/ProductCard";
-import nowShowing from "./Components/now-showing.gif";
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
 
 import Home from "./Home";
 import Tickets from "./Tickets";
@@ -14,21 +14,16 @@ function App() {
     <>
     <div><NavBar /></div>
     <SideBar side="left"></SideBar>
-    {getPageContents(window.location.pathname)}
+    <Router>
+      <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='/tickets' element={<Tickets />} />
+          <Route path='/contact' element={<ContactUs/>} />
+      </Routes>
+    </Router>
     <SideBar side="right"></SideBar>
     </>
   );
-}
-
-function getPageContents(page) {
-  switch(page) {
-    case "/":
-      return <Home />;
-    case "/tickets":
-      return <Tickets />;
-    case "/contactus":
-      return <ContactUs />;
-  }
 }
 
 export default App;

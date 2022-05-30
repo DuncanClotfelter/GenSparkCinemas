@@ -8,7 +8,7 @@ const ProductCard = (props) => {
     const [result, setResults] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api`)
+        axios.get(`/api`)
         .then(res => {
             var id = res.data;
             if(res.status < 200 || res.status >= 300) {id = -1;}
