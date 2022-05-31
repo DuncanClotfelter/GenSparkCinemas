@@ -5,22 +5,11 @@ import PaypalButton from "./PaypalButton";
 
 
 const ProductCard = (props) => {
-    const [result, setResults] = useState([]);
-
-    useEffect(() => {
-        axios.get(`/api`)
-        .then(res => {
-            var id = res.data;
-            if(res.status < 200 || res.status >= 300) {id = -1;}
-            setResults(id);
-        })
-    });
-
     return (
         <div class="card">
         <img src={props['image']}></img>
-        <p class={result == -1 ? 'hiddenx' : ''}><PaypalButton id={props['id']} /></p>
-        <p class={result != -1 ? 'hidden' : ''}><button>Buy Now</button></p>
+        <div class="hideOnLoggedOut hidden"><PaypalButton id={props['id']} /></div>
+        <div class="hideOnLoggedIn"><button>Buy Now</button></div>
         </div>
     )
   }

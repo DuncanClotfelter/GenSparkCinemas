@@ -29,8 +29,6 @@ public class HibernateAnnotationUtil {
                 .addAnnotatedClass(Cart.class)
                 .addAnnotatedClass(Product.class)
                 .addAnnotatedClass(User.class)
-                .addAnnotatedClass(Book.class)
-                .addAnnotatedClass(Apparel.class)
                 .addAnnotatedClass(Ticket.class)
                 .addAnnotatedClass(Film.class)
                 // other domain classes

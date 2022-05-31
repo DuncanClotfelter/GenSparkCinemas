@@ -1,7 +1,6 @@
 package net.clotfelter.duncan.ShoppingCartDemo.entities.products;
 
 import lombok.Data;
-import net.clotfelter.duncan.ShoppingCartDemo.entities.products.Book;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;

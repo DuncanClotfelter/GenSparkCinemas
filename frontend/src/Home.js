@@ -3,7 +3,7 @@ import nowShowing from "./Components/now-showing.gif";
 
 const Home = () => {
     return (
-        <><img src={nowShowing} class="headerImg"></img><table>
+        <><img src={nowShowing} className="headerImg"></img><table><tbody>
             <tr>
                 <td><ProductCard
                     image="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg"
@@ -24,7 +24,7 @@ const Home = () => {
                     id="2"
                 ></ProductCard></td>
             </tr>
-        </table></>
+            </tbody></table></>
     );
 };
 

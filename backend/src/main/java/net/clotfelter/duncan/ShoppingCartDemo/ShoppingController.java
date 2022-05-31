@@ -28,13 +28,14 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.Column;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Root;
+import javax.servlet.http.HttpServletResponse;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.*;
 
-
+@CrossOrigin
 @RestController
 public class ShoppingController extends WebSecurityConfigurerAdapter {
     @Value("${paypal.client.id}")
@@ -49,7 +50,7 @@ public class ShoppingController extends WebSecurityConfigurerAdapter {
         // @formatter:off
         http
                 .authorizeRequests(a -> a
-                        .antMatchers("/", "/error", "/webjars/**").permitAll()
+                        .antMatchers("/", "/error", "/webjars/**", "/index.html").permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e
@@ -58,6 +59,12 @@ public class ShoppingController extends WebSecurityConfigurerAdapter {
                 .oauth2Login();
         // @formatter:on
     }
+
+//    @RequestMapping("/")
+//    public String test(HttpServletResponse httpResponse) throws Exception {
+//        httpResponse.sendRedirect("/");
+//        return "hey";
+//    }
 
     @CrossOrigin
     @GetMapping("/api")
@@ -169,7 +176,7 @@ public class ShoppingController extends WebSecurityConfigurerAdapter {
     //TODO template
     @GetMapping("/error")
     private String purchaseError() {
-        return "We are sorry, but there was an issue validating your purchase. Please try again, or contact us <a href='http://localhost:3000/contactus'>here</a>";
+        return "We are sorry, but there was an issue validating your purchase. Please try again, or contact us <a href='http://localhost:8080/contactus'>here</a>";
     }
 
     @GetMapping("/productsbyid")

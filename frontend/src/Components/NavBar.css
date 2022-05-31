@@ -8,12 +8,6 @@ ul {
   font-family: "Times New Roman", Times, serif;
 }
 
-li {
-  float: left;
-  height: 55px;
-  max-height: 55px;
-}
-
 li a {
   display: block;
   color: white;
@@ -45,4 +39,17 @@ li a:hover {
 
 #navBar span {
 	padding: 20px;
+}
+
+.d-flex {
+	float: right;
+}
+
+.d-flex span {
+	color: black;
+}
+
+.d-flex img {
+  height: 55px;
+  max-height: 55px;
 }
